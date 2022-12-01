@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "KarenProof",
+    "version": "0.0.1",
+    "permissions": ["storage", "nativeMessaging", "activeTab"],
+    "host_permissions": [],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["https://*/*"],
+            "all_frames": true,
+            "js": ["content.js"]
+        }
+    ],
+    "action": {
+        "default_title": "KarenProof",
+        "default_icon": "icon_white.png",
+        "default_popup": "popup.html"
+    }
+}
